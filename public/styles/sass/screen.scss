@@ -1,0 +1,86 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+/**
+ * Basic setup
+ */
+body { background-color: #eee; }
+.hand { cursor: pointer; }
+.normalCursor { cursor: default; }
+.center { text-align: center; }
+.right { text-align: right; }
+.remove:hover { color: #0073b2; }
+.green { color: #7aff4d; }
+.pointer { cursor: pointer; }
+
+/**
+ * Authentification
+ */
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+
+	.form-signin-heading, .checkbox {
+		margin-bottom: 10px;
+	}
+
+	.form-control {
+		position: relative;
+		height: auto;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 10px;
+		font-size: 16px;
+
+		&:focus {
+			z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+		margin-bottom: -1px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	input[type="password"] {
+		margin-bottom: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+
+/**
+ * Loader
+ */
+ /* Absolute Center CSS Spinner */
+.loader_128 {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loader_128:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}

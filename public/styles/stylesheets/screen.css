@@ -1,0 +1,117 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/**
+ * Basic setup
+ */
+/* line 10, ../sass/screen.scss */
+body {
+  background-color: #eee;
+}
+
+/* line 11, ../sass/screen.scss */
+.hand {
+  cursor: pointer;
+}
+
+/* line 12, ../sass/screen.scss */
+.normalCursor {
+  cursor: default;
+}
+
+/* line 13, ../sass/screen.scss */
+.center {
+  text-align: center;
+}
+
+/* line 14, ../sass/screen.scss */
+.right {
+  text-align: right;
+}
+
+/* line 15, ../sass/screen.scss */
+.remove:hover {
+  color: #0073b2;
+}
+
+/* line 16, ../sass/screen.scss */
+.green {
+  color: #7aff4d;
+}
+
+/* line 17, ../sass/screen.scss */
+.pointer {
+  cursor: pointer;
+}
+
+/**
+ * Authentification
+ */
+/* line 22, ../sass/screen.scss */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+/* line 27, ../sass/screen.scss */
+.form-signin .form-signin-heading, .form-signin .checkbox {
+  margin-bottom: 10px;
+}
+/* line 31, ../sass/screen.scss */
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+/* line 40, ../sass/screen.scss */
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+/* line 45, ../sass/screen.scss */
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* line 51, ../sass/screen.scss */
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/**
+ * Loader
+ */
+/* Absolute Center CSS Spinner */
+/* line 63, ../sass/screen.scss */
+.loader_128 {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+/* line 77, ../sass/screen.scss */
+.loader_128:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}

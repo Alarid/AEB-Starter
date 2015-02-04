@@ -1,0 +1,50 @@
+
+<div ng-if="state == STATE.LOADING" class="loader_128">
+    <img src="/img/ajax_loader_gray_128.gif">
+</div>
+<div ng-if="state == STATE.NOT_LOGGED">
+    <form class="form-signin animated bounceInDown" role="form">
+
+        <h2 class="form-signin-heading">Connexion</h2>
+
+        <label for="inputUsername" class="sr-only">Email address</label>
+        <input ng-model="user.username" type="text" id="inputUsername" class="form-control" placeholder="Nom d'utilisateur" required="" autofocus="">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required="">
+
+        <div class="checkbox">
+            <label>
+                <input ng-model="user.keepMeLogin" type="checkbox"> Garder ma session active
+            </label>
+        </div>
+
+        <button ng-click="login(user.username, user.password, user.keepMeLogin)" class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+        
+        <p><a href="" ng-click="passwordModal.show()">Mot de passe oublié ?</a></p>
+        
+        <label>{{ message }}</label>
+
+    </form>
+</div>
+<div ng-if="state == STATE.LOGGED">
+    <div class="well center">
+        <h1>Hello <strong class="animated bounce">{{ user.username }}</strong> !</h1>
+    </div>
+</div>
+
+
+<modal title="Mot de passe oublié" visible="isPasswordModalVisible">
+    <p>Indiquez votre nom d'utilisateur ou votre adresse email afin de recevoir un nouveau mot de passe.</p>
+    <p class="text-success">{{successMessage}}</p>
+    <p class="text-danger">{{errorMessage}}</p>
+    <table class="contact-edit-table">
+        <tr>
+            <td><input type="text" class="form-control" placeholder="Nom d'utilisateur" ng-model="username"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" placeholder="Adresse email" ng-model="email"></td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" ng-click="passwordModal.send(username, email)" ng-disabled="!(username || email)">Envoyer</button>
+</modal>
